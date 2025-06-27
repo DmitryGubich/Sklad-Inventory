@@ -1,0 +1,21 @@
+[project]
+name = "sklad-inventory"
+version = "0.1.0"
+description = "Inventory server for Sklad app"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.2",
+    "asyncpg>=0.30.0",
+    "fastapi[standard]>=0.115.14",
+    "pydantic-settings>=2.10.1",
+    "sqlmodel>=0.0.24",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0",
+    "pyre-check>=0.9.23",
+    "pytest>=8.4.1",
+    "ruff>=0.12.1",
+]
