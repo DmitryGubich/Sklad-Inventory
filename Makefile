@@ -12,3 +12,10 @@ type-checking:
 run:
 	docker compose up
 
+.PHONY: create-migration
+create-migration:
+	docker compose exec inventory alembic revision --autogenerate -m "" # <-- put a name here
+
+.PHONY: migrate
+migrate:
+	docker compose exec inventory alembic upgrade head
